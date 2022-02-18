@@ -173,7 +173,7 @@ body .fixed-form .container-form .form-complete .container-icon {
 
 body .fixed-form .container-form .form-complete .container-icon .icono {
   position: absolute;
-  content: url(./../images/svgs/calendar.svg);
+  content: url(./../images/svgs/calendar.png);
   width: 20px;
   height: 20px;
   z-index: 2;
@@ -200,7 +200,7 @@ body .fixed-form .container-form .form-complete .icon-select {
 
 body .fixed-form .container-form .form-complete .icon-select::before {
   position: absolute;
-  content: url(./../images/svgs/dropdown_arrow.svg);
+  content: url(./../images/svgs/dropdown_arrow.png);
   width: 20px;
   height: 20px;
   z-index: 2;

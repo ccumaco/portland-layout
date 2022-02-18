@@ -146,7 +146,7 @@ body{
                     position: relative;
                     .icono{
                         position: absolute;
-                        content: url(./../images/svgs/calendar.svg);
+                        content: url(./../images/svgs/calendar.png);
                         width: 20px;
                         height: 20px;
                         z-index: 2;
@@ -170,7 +170,7 @@ body{
                     position: relative;
                     &::before{
                         position: absolute;
-                        content: url(./../images/svgs/dropdown_arrow.svg);
+                        content: url(./../images/svgs/dropdown_arrow.png);
                         width: 20px;
                         height: 20px;
                         z-index: 2;
