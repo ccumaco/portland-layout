@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'payfair';
+  src: url("/fonts/payfair/payfair-regular.eot");
+}
+
+@font-face {
+  font-family: 'monserrat';
+  src: url("/fonts/montserrat/Montserrat_Font/Montserrat-Regular.ttf");
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'monserrat', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+body #first-section {
+  position: relative;
+}
+
+body #first-section .background-slide {
+  position: absolute;
+  min-width: 100%;
+  overflow: hidden;
+  height: auto;
+  max-height: 80vh;
+}
+
+body #first-section .background-slide .image-background {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 100vw;
+}
+
+body #first-section .background-slide .image-background .image {
+  height: auto;
+  min-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body #first-section .background-slide .arrow-left {
+  position: absolute;
+  right: 20px;
+  top: 45%;
+  color: #fff;
+  z-index: 99999999;
+  cursor: pointer;
+}
+
+body #first-section .background-slide .arrow-right {
+  position: absolute;
+  left: 20px;
+  top: 45%;
+  color: #fff;
+  z-index: 99999999;
+  cursor: pointer;
+}
+
+body #first-section .container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+body #first-section .container .container-name-portland {
+  display: block;
+  position: relative;
+  width: 80%;
+  padding: 2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #fff;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */
