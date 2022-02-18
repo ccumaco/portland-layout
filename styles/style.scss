@@ -106,6 +106,9 @@ body{
                 background-color: $primary-color;
                 color: $secondary-color;
                 transform: rotate(-90deg);
+                @include screen("sm") {
+                    left: -80px;
+                }
             }
             .close-form{
                 position: absolute;
