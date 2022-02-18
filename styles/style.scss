@@ -139,23 +139,52 @@ body{
                         color: $grey-color;
                     }
                 }
+                .container-icon{
+                    position: relative;
+                    .icono{
+                        position: absolute;
+                        content: url(./../images/svgs/calendar.svg);
+                        width: 20px;
+                        height: 20px;
+                        z-index: 2;
+                        right: 7px;
+                        top: 7px;
+                    }
+                }
                 .options-form{
+                    width: 100%;
                     margin-bottom: 1.5rem;
                     padding: .6rem 1rem;
                     border: 0;
                     background-color: $secondary-color;
                     font-family: "monserrat", sans-serif;
                     font-weight: 400;
+                    position: relative;
                     color: $grey-color;
+                }
+                .icon-select{
+                    width: 48%;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        content: url(./../images/svgs/dropdown_arrow.svg);
+                        width: 20px;
+                        height: 20px;
+                        z-index: 2;
+                        right: 7px;
+                        top: 7px;
+                    }
                 }
                 .container-guest{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     .options-form{
-                        width: 48%;
+                        width: 100%;
+                        appearance: none;
                     }
                 }
+                
             }
         }
         .get-ready{

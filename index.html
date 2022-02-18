@@ -27,25 +27,35 @@
                 <label class="label-input" for="date">
                     Arrival date
                 </label>
-                <input placeholder="Thurs, November" ptype="text" class="options-form" onfocus="(this.type='date')"
-                    onblur="(this.type='text')" name="date" id="date">
+                <div class="container-icon">
+                    <i class="icono"></i>
+                    <input placeholder="Thurs, November" ptype="text" class="options-form" onfocus="(this.type='date')"
+                        onblur="(this.type='text')" name="date" id="date">
+                </div>
                 <label class="label-input" for="departureDate">
                     Departure date
                 </label>
-                <input placeholder="Sat, December 1" ptype="text" class="options-form" onfocus="(this.type='date')"
-                    onblur="(this.type='text')" name="departureDate" id="departureDate">
+                <div class="container-icon">
+                    <i class="icono"></i>
+                    <input placeholder="Sat, December 1" ptype="text" class="options-form" onfocus="(this.type='date')"
+                        onblur="(this.type='text')" name="departureDate" id="departureDate">
+                </div>
                 <label class="label-input" for="">Guest</label>
                 <div class="container-guest">
-                    <select class="options-form" name="adults" id="adults">
-                        <option value="1 adult">1 adult</option>
-                        <option value="2 adult">2 adult</option>
-                        <option value="3 adult">3 adult</option>
-                    </select>
-                    <select class="options-form" name="childs" id="childs">
-                        <option value="1 child">1 child</option>
-                        <option value="2 child">2 child</option>
-                        <option value="3 child">3 adult</option>
-                    </select>
+                    <div class="icon-select">
+                        <select class="options-form" name="adults" id="adults">
+                            <option value="1 adult">1 adult</option>
+                            <option value="2 adult">2 adult</option>
+                            <option value="3 adult">3 adult</option>
+                        </select>
+                    </div>
+                    <div class="icon-select">
+                        <select class="options-form" name="childs" id="childs">
+                            <option value="1 child">1 child</option>
+                            <option value="2 child">2 child</option>
+                            <option value="3 child">3 adult</option>
+                        </select>
+                    </div>
                 </div>
             </form>
             <p class="get-ready">

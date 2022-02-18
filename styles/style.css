@@ -161,14 +161,45 @@ body .fixed-form .container-form .form-complete .label-input::placeholder {
   color: #979fa4;
 }
 
+body .fixed-form .container-form .form-complete .container-icon {
+  position: relative;
+}
+
+body .fixed-form .container-form .form-complete .container-icon .icono {
+  position: absolute;
+  content: url(./../images/svgs/calendar.svg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  right: 7px;
+  top: 7px;
+}
+
 body .fixed-form .container-form .form-complete .options-form {
+  width: 100%;
   margin-bottom: 1.5rem;
   padding: .6rem 1rem;
   border: 0;
   background-color: #fff;
   font-family: "monserrat", sans-serif;
   font-weight: 400;
+  position: relative;
   color: #979fa4;
+}
+
+body .fixed-form .container-form .form-complete .icon-select {
+  width: 48%;
+  position: relative;
+}
+
+body .fixed-form .container-form .form-complete .icon-select::before {
+  position: absolute;
+  content: url(./../images/svgs/dropdown_arrow.svg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  right: 7px;
+  top: 7px;
 }
 
 body .fixed-form .container-form .form-complete .container-guest {
@@ -184,7 +215,10 @@ body .fixed-form .container-form .form-complete .container-guest {
 }
 
 body .fixed-form .container-form .form-complete .container-guest .options-form {
-  width: 48%;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 body .fixed-form .get-ready {
