@@ -82,6 +82,7 @@ body .fixed-form .container-form {
 @media (max-width: 767px) {
   body .fixed-form .container-form {
     margin-top: 0;
+    padding: 1.5rem;
   }
 }
 
@@ -241,6 +242,12 @@ body .fixed-form .get-ready {
   text-align: center;
 }
 
+@media (max-width: 991px) {
+  body .fixed-form .get-ready {
+    margin-bottom: 1rem;
+  }
+}
+
 body .fixed-form .lets-go {
   cursor: pointer;
   display: block;
@@ -257,7 +264,7 @@ body .fixed-form .lets-go {
 
 @media (max-width: 991px) {
   body .fixed-form .lets-go {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 

@@ -93,6 +93,7 @@ body{
             position: relative;
             @include screen("sm") {
                 margin-top: 0;
+                padding: 1.5rem;
             }
             .transform-book{
                 position: absolute;
@@ -199,6 +200,9 @@ body{
             margin: 0 auto 2rem;
             color: $grey-color;
             text-align: center;
+            @include screen(md){
+                margin-bottom: 1rem;
+            }
         }
         .lets-go{
             cursor: pointer;
@@ -213,7 +217,7 @@ body{
             font-family: "payfair";
             font-size: 1.4rem;
             @include screen(md){
-                margin-bottom: 3rem;
+                margin-bottom: 2rem;
             }
         }
         .your-group{
