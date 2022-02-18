@@ -122,6 +122,9 @@ body{
                 font-weight: 200;
                 text-align: center;
                 margin: 1rem 0 3rem;
+                @include screen("sm") {
+                    margin: 1rem 0 2rem;
+                }
             }
             .form-complete{
                 display: flex;
@@ -206,6 +209,9 @@ body{
             border-radius: 3px;
             font-family: "payfair";
             font-size: 1.4rem;
+            @include screen(md){
+                margin-bottom: 3rem;
+            }
         }
         .your-group{
             text-decoration: none;
@@ -223,7 +229,7 @@ body{
         padding: 5rem;
         min-height: calc(80vh + 150px);
         @include screen(md){
-            min-height: calc(80vh - 100px);
+            min-height: 480px;
             padding: 2rem;
         }
         #container-carrousel{

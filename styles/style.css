@@ -118,6 +118,12 @@ body .fixed-form .container-form .title-form {
   margin: 1rem 0 3rem;
 }
 
+@media (max-width: 767px) {
+  body .fixed-form .container-form .title-form {
+    margin: 1rem 0 2rem;
+  }
+}
+
 body .fixed-form .container-form .form-complete {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,6 +249,12 @@ body .fixed-form .lets-go {
   font-size: 1.4rem;
 }
 
+@media (max-width: 991px) {
+  body .fixed-form .lets-go {
+    margin-bottom: 3rem;
+  }
+}
+
 body .fixed-form .your-group {
   text-decoration: none;
   color: #979fa4;
@@ -263,7 +275,7 @@ body .container-first-section {
 
 @media (max-width: 991px) {
   body .container-first-section {
-    min-height: calc(80vh - 100px);
+    min-height: 480px;
     padding: 2rem;
   }
 }

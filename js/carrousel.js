@@ -39,7 +39,6 @@ function moveCarrousel (param, resetTime){
 let formActive = false;
 function openForm(){
     formActive = !formActive;
-    console.log('entro');
     if (formActive) {
         document.querySelector('#open-form').setAttribute('style', 'display: none');
         document.querySelector('.fixed-form').setAttribute('style', 'display: flex; visibility: visible;opacity: 1;');
