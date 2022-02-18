@@ -6,10 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/svgs/Logo.svg">
     <title>Document</title>
 </head>
 
 <body>
+    <div id="open-form" onclick="openForm()">
+        Book now
+    </div>
+    <div class="fixed-form">
+        <div class="container-form">
+            <div class="transform-book" onclick="openForm()">
+                Book now
+            </div>
+            <img class="close-form" onclick="openForm()" src="./images/svgs/arrow.svg" alt="">
+            <h5 class="title-form">
+                BOOK NOW
+            </h5>
+            <form action="" class="form-complete">
+                <label class="label-input" for="date">
+                    Arrival date
+                </label>
+                <input placeholder="Thurs, November" ptype="text" class="options-form" onfocus="(this.type='date')"
+                    onblur="(this.type='text')" name="date" id="date">
+                <label class="label-input" for="departureDate">
+                    Departure date
+                </label>
+                <input placeholder="Sat, December 1" ptype="text" class="options-form" onfocus="(this.type='date')"
+                    onblur="(this.type='text')" name="departureDate" id="departureDate">
+                <label class="label-input" for="">Guest</label>
+                <div class="container-guest">
+                    <select class="options-form" name="adults" id="adults">
+                        <option value="1 adult">1 adult</option>
+                        <option value="2 adult">2 adult</option>
+                        <option value="3 adult">3 adult</option>
+                    </select>
+                    <select class="options-form" name="childs" id="childs">
+                        <option value="1 child">1 child</option>
+                        <option value="2 child">2 child</option>
+                        <option value="3 child">3 adult</option>
+                    </select>
+                </div>
+            </form>
+            <p class="get-ready">
+                GET READY! You are about to get our best price. Guaranteed.
+            </p>
+            <button class="lets-go">
+                Let's go!
+            </button>
+            <a href="#" class="your-group">OR, BOOK YOUR GROUP <img class="arrow" src="./images/svgs/long_arrow.svg"
+                    alt="long arrow"></a>
+        </div>
+    </div>
     <div class="container-first-section">
         <div id="container-carrousel">
             <div class="carrousel">
@@ -27,7 +75,7 @@
         </div>
         <div class="container-name">
             <h1 class="name-site">PORTLAND, MAINE</h1>
-            <embed class="logo" src="./images/svgs/Logo.svg" type="">
+            <img class="logo" src="./images/svgs/Logo.svg" alt="logo press hotel">
         </div>
         <div class="container-history">
             <h2 class="subtitle">HISTORY IN THE MAKING</h2>
@@ -47,7 +95,9 @@
                 <h4 class="accommodations">accommodations</h4>
                 <h4 class="hyper-text">HOLLIWOOD, MEET INDUSTRIAL CHIC</h4>
                 <p class="informative-text">
-                    Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis varius non ante, inventore consec.
+                    Lorem ipsum dolor sit amet, donec luctus vel, augue duis. Voluptas turpis, non vehicula sit turpis
+                    varius non ante, inventore consectetur. Donec luctus vel eu, augue non. Non vehicle sit turpis
+                    varius non ante, inventore consec.
                 </p>
                 <a href="#" class="view-more">View Rooms</a>
             </div>
@@ -59,19 +109,19 @@
             this month’s most anticipated events
         </h4>
         <div class="container-cards">
-            <img class="event" src="./images/event1.jpg" alt="">
-            <img class="event" src="./images/event2.jpg" alt="">
-            <img class="event" src="./images/event3.jpg" alt="">
-            <img class="event" src="./images/event4.jpg" alt="">
+            <img class="event" src="./images/event1.jpg" alt="evento 1">
+            <img class="event" src="./images/event2.jpg" alt="evento 2">
+            <img class="event" src="./images/event3.jpg" alt="evento 3">
+            <img class="event" src="./images/event4.jpg" alt="evento 4">
         </div>
     </div>
     <footer>
         <div class="container-footer">
             <p class="text-footer">
-                390 Congress St. (at Congress & Exchange Streets), Portland, Maine  •  MAP >
+                390 Congress St. (at Congress & Exchange Streets), Portland, Maine • MAP >
             </p>
             <p class="info-footer">
-                (207) 653.9990  •  info@portlandpresshotel.com
+                (207) 653.9990 • info@portlandpresshotel.com
             </p>
         </div>
     </footer>

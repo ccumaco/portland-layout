@@ -35,3 +35,23 @@ function moveCarrousel (param, resetTime){
         document.querySelector('.carrousel').setAttribute('style', `transform: translateX(${actualTransition}vw)`);
     }
 }
+
+let formActive = false;
+function openForm(){
+    formActive = !formActive;
+    console.log('entro');
+    if (formActive) {
+        document.querySelector('#open-form').setAttribute('style', 'display: none');
+        document.querySelector('.fixed-form').setAttribute('style', 'display: flex; visibility: visible;opacity: 1;');
+        setTimeout(() => {
+            
+            document.querySelector('.container-form').setAttribute('style', 'transform: translateX(0%);');
+        }, 100);
+    } else {
+        setTimeout(() => {
+            document.querySelector('#open-form').setAttribute('style', 'display: block');
+            document.querySelector('.fixed-form').setAttribute('style', 'display: none');
+        }, 2000);
+        document.querySelector('.container-form').setAttribute('style', 'transform: translateX(100%);');
+    }
+}

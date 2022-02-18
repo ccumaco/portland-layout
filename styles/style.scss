@@ -1,4 +1,8 @@
-
+$primary-color: #000;
+$secondary-color: #fff;
+$grey-color: #979fa4;
+$red-color: #e21f25;
+$max-width: 1200px;
 
 @font-face {
     font-family: 'payfair';
@@ -38,10 +42,6 @@
     max-width: $max-width;
 }
 
-$primary-color: #000;
-$secondary-color: #fff;
-$grey-color: #979fa4;
-$max-width: 1200px;
 
 * {
     scroll-behavior: smooth;
@@ -52,14 +52,148 @@ $max-width: 1200px;
 }
 
 body{
-    // padding-bottom: 10rem;
+    #open-form{
+        z-index: 10;
+        position: fixed;
+        right: -48px;
+        cursor: pointer;
+        top: 18.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: "monserrat", sans-serif;
+        padding: .6rem 1rem;
+        background-color: $primary-color;
+        color: $secondary-color;
+        transform: rotate(-90deg);
+        @include screen(md) {
+            top: 14rem;
+        }
+    }
+    .fixed-form{
+        display: none;
+        opacity: 0;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #65676496;
+        z-index: 10;
+        justify-content: right;
+        align-items: flex-start;
+        transition: all 2s;
+        @include screen("sm") {
+            align-items: center;
+        }
+        .container-form{
+            transition: all 2s;
+            transform: translateX(100%);
+            margin-top: 10rem;
+            padding: 3rem;
+            width: fit-content;
+            background-color: #1e1e1e;
+            position: relative;
+            @include screen("sm") {
+                margin-top: 0;
+            }
+            .transform-book{
+                position: absolute;
+                left: -85px;
+                cursor: pointer;
+                top: 140px;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-family: "monserrat", sans-serif;
+                padding: .6rem 1rem;
+                background-color: $primary-color;
+                color: $secondary-color;
+                transform: rotate(-90deg);
+            }
+            .close-form{
+                position: absolute;
+                top: 1.5rem;
+                left: 1rem;
+                cursor: pointer;
+                font-size: 2rem;
+                color: #fff;
+            }
+            .title-form{
+                font-size: 2rem;
+                font-family: "payfair";
+                color: #fff;
+                font-weight: 200;
+                text-align: center;
+                margin: 1rem 0 3rem;
+            }
+            .form-complete{
+                display: flex;
+                flex-direction: column;
+                .label-input{
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    font-family: "payfair", sans-serif;
+                    color: #fff;
+                    font-weight: 600;
+                    margin-bottom: .5rem;
+                    &::placeholder{
+                        font-family: "monserrat", sans-serif;
+                        font-weight: 600;
+                        color: $grey-color;
+                    }
+                }
+                .options-form{
+                    margin-bottom: 1.5rem;
+                    padding: .6rem 1rem;
+                    border: 0;
+                    background-color: $secondary-color;
+                    font-family: "monserrat", sans-serif;
+                    font-weight: 400;
+                    color: $grey-color;
+                }
+                .container-guest{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .options-form{
+                        width: 48%;
+                    }
+                }
+            }
+        }
+        .get-ready{
+            font-family: "payfair";
+            max-width: 220px;
+            margin: 0 auto 2rem;
+            color: $grey-color;
+            text-align: center;
+        }
+        .lets-go{
+            display: block;
+            background-color: transparent;
+            border: 2px solid $red-color;
+            color: $red-color;
+            margin: 0 auto;
+            padding: .2rem 1rem;
+            margin-bottom: 4rem;
+            border-radius: 3px;
+            font-family: "payfair";
+            font-size: 1.4rem;
+        }
+        .your-group{
+            text-decoration: none;
+            color: $grey-color;
+            font-weight: bold;
+            font-family: "monserrat" sans-serif;
+            .arrow{
+                margin-left: 1rem;
+            }
+        }
+    }
     .container-first-section{
         position: relative;
         background: $primary-color;
         padding: 5rem;
         min-height: calc(80vh + 150px);
         @include screen(md){
-            min-height: calc(100vh - 100px);
+            min-height: calc(80vh - 100px);
             padding: 2rem;
         }
         #container-carrousel{
@@ -86,20 +220,21 @@ body{
                     max-height: calc(100% - 150px);
                 }
                 .arrow-left{
-                    padding: 3rem;
                     z-index: 100;
                     position: absolute;
                     right: 30px;
                     top: 25%;
                     cursor: pointer;
                     @include screen(md){
+                        
                         right: 10px;
                         top: 45%;
-                        height: 40px
+                        img{
+                            width: 20px;
+                        }
                     }
                 }
                 .arrow-right{
-                    padding: 3rem;
                     z-index: 100;
                     position: absolute;
                     left: 30px;
@@ -108,7 +243,9 @@ body{
                     @include screen(md){
                         left: 10px;
                         top: 45%;
-                        height: 40px
+                        img{
+                            width: 20px;
+                        }
                     }
                 }
             }
@@ -124,7 +261,7 @@ body{
             .name-site{
                 font-size: 11px;
                 @include screen(md){
-                    font-size: 10px;
+                    display: none;
                 }
             }
             .logo{
@@ -136,7 +273,7 @@ body{
                 position: absolute;
                 @include screen(md){
                     width: 70px;
-                    top: -10px
+                    top: -20px
                 }
             }
         }
@@ -157,11 +294,17 @@ body{
                 font-size: 40px;
                 font-family: 'payfair';
                 font-weight: 400;
+                @include screen(md){
+                    font-size: 20px;
+                }
             }
             .subtitle-2{
                 font-size: 30px;
                 font-family: 'payfair';
                 font-weight: 400;
+                @include screen(md){
+                    font-size: 15px;
+                }
             }
             .paragraph{
                 margin-top: 2rem;
@@ -169,6 +312,7 @@ body{
                 font-size: 14px;
                 @include screen(md){
                     padding: 0 2rem;
+                    font-size: 11px;
                 }
             }
         }
@@ -207,6 +351,9 @@ body{
                     margin-bottom: -1rem;
                     @include screen(md){
                         margin-bottom: 1rem;
+                        font-size: 20px;
+                        margin-top: 1rem;
+                        padding: 0 1rem;
                     }
                 }
                 .informative-text{
@@ -226,10 +373,10 @@ body{
                     text-decoration: none;
                     width: fit-content;
                     font-family: 'monserrat';
-                    border: 2px solid #e21f25;
+                    border: 2px solid $red-color;
                     padding: 0.4rem 1.2rem;
                     text-transform: uppercase;
-                    color: #e21f25;
+                    color: $red-color;
                     @include screen(md){
                         margin: 0 auto 2rem;
                     }
@@ -277,6 +424,12 @@ body{
                 font-family: "monserrat";
                 flex-direction: column;
                 text-align: center;
+            }
+            .text-footer, .info-footer{
+                @include screen(md){
+                    font-size: 9px;
+                    margin-bottom: .5rem;
+                }
             }
         }
     }
