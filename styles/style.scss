@@ -406,7 +406,31 @@ body{
                 flex-wrap: wrap;
                 .event{
                     margin-bottom: 1rem;
-                    width: 40%;
+                    width: 100%;
+                }
+            }
+            .card{
+                position: relative;
+                .date-event{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #282930;
+                    color: $secondary-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 3 px .5rem;
+                    .date{
+                        font-size: 3rem;
+                        font-weight: bold;
+                        font-family: "monserrat", sans-serif;
+                        padding-left: 1rem;
+                    }
+                    .mounth{
+                        transform: rotate(-90deg );
+                        font-weight: bold;
+                    }
                 }
             }
         }
