@@ -52,53 +52,182 @@ $max-width: 1200px;
 }
 
 body{
-    min-height: 100vh;
-    #first-section{
-        position: relative;
-        .background-slide{
+    // padding-bottom: 10rem;
+    .container-first-section{
+        .asdsadasd{
+            width: 100%;
+            left: 0;
+            top: 0;
             position: absolute;
-            min-width: 100%;
-            overflow: hidden;
-            height: auto;
-            max-height: 80vh;
-            .image-background{
-                transform: translateX(-200%);
-                display: flex;
-                width: 100%;
-                max-width: 100vw;
-                .image{
-                    height: auto;
-                    min-width: 100%;
-                    object-fit: contain;
-                }
-            }
-            .arrow-left{
-                position: absolute;
-                right:  20px;
-                top: 45%;
-                color: #fff;
-                z-index: 99999999;
-                cursor: pointer;
-            }
-            .arrow-right{
-                position: absolute;
-                left: 20px;
-                top: 45%;
-                color: #fff;
-                z-index: 99999999;
-                cursor: pointer;
+            min-height: calc(100% - 150px);
+            background: url(./../images/main_slider/Slider1.jpg) no-repeat center center;
+            background-size: cover;
+            @include screen(sm){
+                min-height: calc(60% - 100px);
             }
         }
-        .container{
+        position: relative;
+        background: $primary-color;
+        padding: 5rem;
+        min-height: calc(80vh + 150px);
+        .container-name{
             @include container;
-            .container-name-portland{
-                display: block;
-                position: relative;
-                width: 80%;
-                padding: 2rem;
-                height: fit-content;
-                background: $secondary-color;
+            position: relative;
+            padding: 3rem;
+            background: $secondary-color;
+            @include screen(sm){
+                padding: 1.5rem;
+            }
+            .name-site{
+                font-size: 11px;
+            }
+            .logo{
+                top: -40px;
+                width: 200px;
+                left: 0;
+                right: 0;
                 margin: 0 auto;
+                position: absolute;
+                @include screen(sm){
+                    width: 100px;
+                    top: -20px
+                }
+            }
+        }
+        .container-history{
+            @include container;
+            background-color: $primary-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 3rem 0;
+            text-align: center;
+            color: $secondary-color;
+            .subtitle{
+                font-size: 40px;
+                font-family: 'payfair';
+                font-weight: 400;
+            }
+            .subtitle-2{
+                font-size: 30px;
+                font-family: 'payfair';
+                font-weight: 400;
+            }
+            .paragraph{
+                margin-top: 2rem;
+                padding: 0 12rem;
+                font-size: 14px;
+                @include screen(sm){
+                    padding: 0 4rem;
+                }
+            }
+        }
+    }
+    .container-second-section{
+        background: #f1f3f2;
+        padding: 5rem 0;
+        @include screen(sm){
+            padding: 2rem 0 0;
+        }
+        .background{
+            @include container;    
+            display: flex;
+            justify-content: space-between;
+            @include screen(sm){
+                flex-direction: column;
+                text-align: center;
+            }
+            .container-text{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .accommodations{
+                    font-size: 17px;
+                    color: #282930;
+                    display: block;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-family: "monserrat";
+                }
+                .hyper-text{
+                    color: #979fa4;
+                    font-size: 40px;
+                    font-family: 'monserrat';
+                    font-weight: bold;
+                    margin-bottom: -1rem;
+                    @include screen(sm){
+                        margin-bottom: 1rem;
+                    }
+                }
+                .informative-text{
+                    color: #282930;
+                    font-size: 14px;
+                    font-family: 'monserrat';
+                    font-weight: 400;
+                    padding-right: 12rem;
+                    margin-bottom: 2rem;
+                    @include screen(sm){
+                        margin-bottom: 1rem;
+                        padding: 0;
+                    }
+                }
+                .view-more{
+                    font-weight: bold;
+                    text-decoration: none;
+                    width: fit-content;
+                    font-family: 'monserrat';
+                    border: 2px solid #e21f25;
+                    padding: 0.4rem 1.2rem;
+                    text-transform: uppercase;
+                    color: #e21f25;
+                    @include screen(sm){
+                        margin: 0 auto 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .container-third-section{
+        @include container;
+        padding: 5rem 0;
+        background: #fff;
+        @include screen(sm){
+            padding: 2rem 0;
+        }
+        .title-section{
+            margin-bottom: 3rem;
+            text-align: center;
+            display: block;
+            @include screen(sm){
+                margin-bottom: 2rem;
+            }
+        }
+        .container-cards{
+            display: flex;
+            justify-content: space-evenly;
+            @include screen(sm){
+                flex-wrap: wrap;
+                .event{
+                    margin-bottom: 1rem;
+                    width: 40%;
+                }
+            }
+        }
+    }
+    footer{
+        padding: 1rem 2rem;
+        background: #f1f3f2;
+        .container-footer{
+            @include container;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            @include screen(sm){
+                font-size: 11px;
+                font-family: "monserrat";
+                flex-direction: column;
+                text-align: center;
             }
         }
     }
