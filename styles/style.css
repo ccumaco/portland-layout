@@ -230,6 +230,7 @@ body .fixed-form .get-ready {
 }
 
 body .fixed-form .lets-go {
+  cursor: pointer;
   display: block;
   background-color: transparent;
   border: 2px solid #e21f25;
